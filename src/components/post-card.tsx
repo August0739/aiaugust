@@ -21,7 +21,7 @@ export function PostCard({
       {post.image && (
         <div className={`overflow-hidden ${featured ? 'md:w-1/2' : ''}`}>
           <img
-            src={cdnImage(post.image, featured ? 960 : 640)}
+            src={post.image}
             alt=""
             loading="lazy"
             width={800}

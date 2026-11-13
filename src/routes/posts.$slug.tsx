@@ -176,7 +176,7 @@ function PostPage() {
 
         {post.image && (
           <img
-            src={cdnImage(post.image, 1200)}
+            src={post.image}
             alt={post.imageAlt ?? post.title}
             width={1376}
             height={768}
