@@ -176,7 +176,7 @@ function PostPage() {
 
         {post.image && (
           <img
-            src={post.image}
+            src={`${import.meta.env.BASE_URL}${post.image.replace(/^\//, '')}`}
             alt={post.imageAlt ?? post.title}
             width={1376}
             height={768}
