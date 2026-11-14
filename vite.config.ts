@@ -12,7 +12,14 @@ const config = defineConfig({
     contentCollections(),
     tailwindcss(),
     // netlify(),
-    tanstackStart(),
+    tanstackStart({
+      prerender: {
+        enabled: true, // 开启预渲染
+        autoSubfolderIndex: true, // 让 /blog 生成 /blog/index.html
+        crawlLinks: true, // 自动发现并预渲染所有链接页面
+        failOnError: true, // 预渲染失败就中断，方便排查
+      },
+    }),
     viteReact(),
   ],
 })
